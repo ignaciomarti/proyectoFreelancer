@@ -1,0 +1,264 @@
+/* GLOBALES */
+
+html{
+    font-size: 62.5%;
+    min-height: 100%; /* Para que el gradiente se estire */
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(to top, #dfe9f3 0%, white 100%); /*sacado de webgradients.com*/
+    font-family: 'Krub', sans-serif;
+    min-height: 100%; /* Para que el gradiente se estire */
+}
+
+h1, h2, h3{
+    font-family: 'Krub', sans-serif;
+}
+
+a:hover{
+    text-decoration: none;
+    color: #212121;
+}
+/* HEADER */
+header nav a{
+    display: block;
+    text-align: center;
+    font-size: 2.5rem;
+    color: #212121;
+    text-decoration: none;
+    padding: 1rem 0;
+    font-family: 'Krub', sans-serif;
+}
+
+@media (min-width: 768px){
+    header nav{
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+/* SECTION CONTACTANOS */
+.contactanos{
+    background-image: url(/img/hero.jpg);
+    background-position: center center;
+    max-width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.contactanos::after{
+    content: '';
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.contactanos h1{
+    font-weight: 800;
+    color: white;
+    font-size: 3.5rem;
+    margin: 0;
+    text-align: center;
+    z-index: 1;
+}
+
+.contenedor-ciudad{
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+
+.contactanos span{
+    color: white;
+    font-size: 1.8rem;
+    margin: 2rem 0;
+}
+
+.contactanos span i{
+    color: #ffc107;
+    font-size: 5rem;
+}
+
+.contactanos a{
+    z-index: 1;
+}
+
+.contactanos button{
+    background-color: #0097a7;
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: none;
+    padding: .4rem 5rem;
+    border-radius: .5rem;
+}
+
+/* MAIN */
+
+main{
+    margin-top: 4rem;
+    background-color: white;
+    padding: 5rem;
+    border-radius: 2.5rem;
+}
+
+.contenedor-main>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 8%;
+    margin-top: 4rem;
+}
+
+@media (min-width:768px){
+    .contenedor-main{
+        margin: 0 8%;
+        margin-top: 4rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 5rem;
+    }
+}
+
+main h2, section h2{
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+main div h3{
+    color: #0097a7;
+    text-align: center;
+    font-size: 2.5rem;
+    padding-bottom: 2rem;
+}
+
+.contenedor-icono{
+    background-color: #ffc107;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 3rem;
+    width: 10rem;
+    height: 10rem;
+    margin-bottom: 2rem;
+}
+
+.contenedor-icono i{
+    margin-right: 1rem;
+    font-size: 2.5rem;
+}
+.contenedor-icono i:last-child{
+    margin-right: 0rem;
+}
+
+main div p{
+    font-size: 2rem;
+    line-height: 2;
+    text-align: center;
+}
+
+/* CONTACTO */
+
+#contacto{
+    margin-bottom: 2rem;
+}
+
+.contacto{
+    margin-top: 2rem;
+}
+
+form{
+    background-color: #757575;
+    margin: 0 8% 2rem;
+    padding: 2rem 0;
+    border-radius: 1rem;
+}
+
+@media (min-width: 768px){
+    .contacto{
+        max-width: 80%;
+        margin: 2rem auto;
+    }
+}
+
+.contacto legend{
+    color: #ffc107;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 1;
+    padding: 2rem;
+}
+
+.contenedor-campo-contacto{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    padding: 0 2rem;
+    align-items: center;
+}
+
+@media (min-width: 1028px){
+    .contenedor-nombre-telefono{
+        display: flex;
+        justify-content: space-between;
+    }
+    .contenedor-campo-contacto{
+        flex: 1;
+    }
+}
+
+label{
+    color:white;
+    font-size: 1.5rem;
+    flex: 0 0 8rem;
+}
+
+input, textarea{
+    font-size: 1.5rem!important;
+    padding: .5rem;
+    width: 20rem;
+    flex: 1;
+    transition: box-shadow 2s ease-in-out;
+}
+
+input:focus, textarea:focus{
+    box-shadow: 2px 2px 2px 2px #212121;
+}
+
+input:hover, textarea:hover{
+    cursor: text;
+}
+
+.contenedor-submit{
+    display: flex;
+    justify-content: right;
+    margin-right: 2rem;
+}
+
+input[type="submit"]{
+    width: unset;
+    flex: 0;
+    background-color: #0097a7;
+    padding: 1rem 5rem;
+    border: none;
+    border-radius: .5rem;
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
