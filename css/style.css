@@ -246,19 +246,30 @@ input:hover, textarea:hover{
 
 .contenedor-submit{
     display: flex;
-    justify-content: right;
-    margin-right: 2rem;
+    justify-content: center;
+    margin: 0 2rem;
 }
 
 input[type="submit"]{
     width: unset;
-    flex: 0;
+    flex: 1;
     background-color: #0097a7;
-    padding: 1rem 5rem;
+    padding: .8rem 5rem;
     border: none;
     border-radius: .5rem;
     color: white;
     font-size: 2rem;
     font-weight: 700;
     text-transform: uppercase;
+}
+
+@media (min-width:768px){
+    .contenedor-submit{
+        justify-content: right;
+        margin-right: 2rem;
+    }
+
+    input[type="submit"]{
+        flex: 0;
+    }
 }
